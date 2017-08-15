@@ -39,3 +39,13 @@ footer{
 .label-slider-edit{
 	overflow: hidden;
 }
+
+.trans{
+	width: 200px;
+	margin: auto;
+}
+
+.blue-header{
+	background-color: #337ab7;
+	color:#FFF;
+}

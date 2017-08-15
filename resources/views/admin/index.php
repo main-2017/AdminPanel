@@ -30,13 +30,18 @@
 		<div class="container-fluid">
 			<h1 class="text-center text-muted">Editar Slider</h1>
 			<div id="slider-edit-content">
-				
+				<!-- Contenido generado dinamicamente -->
 			</div>
+			<br>
+				<div class="trans">
+					<button class="btn btn-primary btn-block" type="button" data-toggle="modal" data-target="#addModal">Agregar +</button>
+				</div>
 		</div>
 	</section>
 	<section id="historia" class="tab-pane fade"><h1 class="text-center">Historia</h1></section>
 	<section id="servicios" class="tab-pane fade"><h1 class="text-center">Servicios</h1></section>
 	<section id="proyectos" class="tab-pane fade"><h1 class="text-center">Proyectos</h1></section>
+<?php include('../../components/modals.php') ?>
 
 </body>
 </html>
