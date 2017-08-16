@@ -15,8 +15,6 @@
 <?php require('../../../public/style_includes/head.php') ?>
 <body>
 	<?php include('../../components/navbar.php') ?>
-	<?php include('../../components/footer.php') ?>
-	<?php require('../../../public/style_includes/scripts.php') ?>
 	<!-- Barra de pestañas -->
 	<ul class="nav nav-tabs" id="pestañas">
 		<li class="active"><a id="btn-inicio" href="#inicio" data-toggle="tab">Inicio</a></li>
@@ -41,7 +39,8 @@
 	<section id="historia" class="tab-pane fade"><h1 class="text-center">Historia</h1></section>
 	<section id="servicios" class="tab-pane fade"><h1 class="text-center">Servicios</h1></section>
 	<section id="proyectos" class="tab-pane fade"><h1 class="text-center">Proyectos</h1></section>
-<?php include('../../components/modals.php') ?>
-
+	<?php include('../../components/modals.php') ?>
+	<?php include('../../components/footer.php') ?>
+	<?php require('../../../public/style_includes/scripts.php') ?>
 </body>
 </html>

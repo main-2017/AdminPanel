@@ -34,6 +34,7 @@ footer{
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	clear: both;
 }
 
 .label-slider-edit{
@@ -48,4 +49,22 @@ footer{
 .blue-header{
 	background-color: #337ab7;
 	color:#FFF;
+}
+
+.red-header{
+	background-color: #d43f3a;
+	color: #FFF;
+}
+
+.black-content{
+	height: 100vh;
+	width: 100%;
+	background-color: #000;
+}
+
+#errorx{
+	width: 200px;
+	height: auto;
+	margin: auto;
+	padding-top: 70px;
 }
