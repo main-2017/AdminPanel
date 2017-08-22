@@ -104,6 +104,7 @@
       </div>
       <div class="modal-body">
         <form method="POST" name="formEditServices" id="formEditServices" accept-charset="utf-8">
+        <input type="hidden" name="id-service" id="id-service" value>
           <!-- Contenido generado dinamicamente -->
         </form>
       </div>

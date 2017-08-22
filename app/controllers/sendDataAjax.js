@@ -79,22 +79,22 @@ $(document).on('submit', '#formEditSlider', function(event){
 });
 
 //Pasaje de datos a ventana modal
-$(document).on('click', '.editModal', function(){
-	var eID = $(this).val();
-	$(".modal-body #id-slider").val(eID);
-	loadEditModal(eID);
+$(document).on('click', '.editServiceModal', function(){
+	var sID = $(this).val();
+	$(".modal-body #id-service").val(sID);
+	loadEditServicesModal(sID);
 });
 
 // Carga de datos en Formulario Modal
-function loadEditModal(input){
+function loadEditServicesModal(input){
 	jQuery.ajax({
-		url: '../../../app/controllers/editSlider.php',
+		url: '../../../app/controllers/editServices.php',
 		type: 'POST',
 		dataType: 'html',
 		data: {input: input},
 	})
 	.done(function(serverAnswer) {
-		$("#formEditSlider").html(serverAnswer);
+		$("#formEditServices").html(serverAnswer);
 	})
 	.fail(function() {
 		console.log("error");

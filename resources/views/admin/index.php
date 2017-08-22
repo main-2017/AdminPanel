@@ -39,19 +39,19 @@
 		<section id="servicios" class="tab-pane fade"><h1 class="text-center">Servicios</h1>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content" id="service-content-1">
 				<h4 class="text-center text-muted align-middle">Contenido No disponible</h4>
-				<button class="btn btn-primary center-block" data-toggle="modal" data-target="#editServicesModal" value="service-content-1">Editar</button>
+				<button class="btn btn-primary center-block editServiceModal" data-toggle="modal" data-target="#editServicesModal" value="service-content-1">Editar</button>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content" id="service-content-2">
 				<h4 class="text-center text-muted align-middle">Contenido No disponible</h4>
-				<button class="btn btn-primary center-block" data-toggle="modal" data-target="#editServicesModal" value="service-content-2">Editar</button>
+				<button class="btn btn-primary center-block editServiceModal" data-toggle="modal" data-target="#editServicesModal" value="service-content-2">Editar</button>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content" id="service-content-3">
 				<h4 class="text-center text-muted align-middle">Contenido No disponible</h4>
-				<button class="btn btn-primary center-block" data-toggle="modal" data-target="#editServicesModal" value="service-content-3">Editar</button>
+				<button class="btn btn-primary center-block editServiceModal" data-toggle="modal" data-target="#editServicesModal" value="service-content-3">Editar</button>
 			</div>
 			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content" id="service-content-4">
 				<h4 class="text-center text-muted align-middle">Contenido No disponible</h4>
-				<button class="btn btn-primary center-block" data-toggle="modal" data-target="#editServicesModal" value="service-content-4">Editar</button>
+				<button class="btn btn-primary center-block editServiceModal" data-toggle="modal" data-target="#editServicesModal" value="service-content-4">Editar</button>
 			</div>
 		</section>
 		<section id="proyectos" class="tab-pane fade"><h1 class="text-center">Proyectos</h1></section>
