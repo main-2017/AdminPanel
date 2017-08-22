@@ -40,6 +40,7 @@
   </div>
 </div>
 </div>
+
 <!-- Modal de eliminación de imágenes -->
 
 <div id="deleteModal" class="modal fade" role="dialog">
@@ -88,5 +89,28 @@
         <button type="submit" form="formEditSlider" class="btn btn-success">Guardar</button>
       </div>
 </div>
+</div>
+</div>
+
+<!-- Modal de edición de servicios -->
+
+<div id="editServicesModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header blue-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Editar servicios</h4>
+      </div>
+      <div class="modal-body">
+        <form method="POST" name="formEditServices" id="formEditServices" accept-charset="utf-8">
+          <!-- Contenido generado dinamicamente -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-success">Guardar</button>
+      </div>
+  </div>
 </div>
 </div>

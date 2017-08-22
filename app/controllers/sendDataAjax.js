@@ -77,3 +77,26 @@ $(document).on('submit', '#formEditSlider', function(event){
 	});
 	
 });
+
+//Pasaje de datos a ventana modal
+$(document).on('click', '.editModal', function(){
+	var eID = $(this).val();
+	$(".modal-body #id-slider").val(eID);
+	loadEditModal(eID);
+});
+
+// Carga de datos en Formulario Modal
+function loadEditModal(input){
+	jQuery.ajax({
+		url: '../../../app/controllers/editSlider.php',
+		type: 'POST',
+		dataType: 'html',
+		data: {input: input},
+	})
+	.done(function(serverAnswer) {
+		$("#formEditSlider").html(serverAnswer);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+};
