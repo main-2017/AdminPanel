@@ -39,7 +39,13 @@
 		<section id="servicios" class="tab-pane fade"><h1 class="text-center">Servicios</h1>
 			<div id="services-edit-content"><!-- Contenido generado dinamicamente --></div>
 		</section>
-		<section id="proyectos" class="tab-pane fade"><h1 class="text-center">Proyectos</h1></section>
+		<section id="proyectos" class="tab-pane fade"><h1 class="text-center">Proyectos</h1>
+			<div class="container-fluid">
+				<div id="project-edit-content">
+					
+				</div>
+			</div>
+		</section>
 	</div>
 	<?php include('../../components/modals.php') ?>
 	<?php include('../../components/footer.php') ?>

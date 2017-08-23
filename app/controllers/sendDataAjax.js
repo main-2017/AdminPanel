@@ -81,7 +81,8 @@ $(document).on('submit', '#formEditSlider', function(event){
 //Pasaje de datos a ventana modal
 $(document).on('click', '.editServiceModal', function(){
 	var sID = $(this).val();
-	$(".modal-body #id-service").val(sID);
+	$(".modal-body #formEditServices #id-service").val(sID);
+	console.log(sID);
 	loadEditServicesModal(sID);
 });
 
@@ -94,9 +95,39 @@ function loadEditServicesModal(input){
 		data: {input: input},
 	})
 	.done(function(serverAnswer) {
-		$("#formEditServices").html(serverAnswer);
+		$(".modal-body form#formEditServices").html(serverAnswer);
 	})
 	.fail(function() {
 		console.log("error");
 	})
 };
+
+//Guardado de cambios en edición de Servicios
+
+$(document).on('submit', '#formEditSlider', function(event){
+	event.preventDefault();
+	jQuery.ajax({
+	  url: '../../../app/controllers/updateEditServices.php',
+	  type: 'POST',
+	  dataType: 'json',
+	  data: $(this).serialize(),
+	  complete: function(serverRespond) {
+	    if (serverRespond.error) {
+	    	$('#errorService').slideDown('slow', function(){
+	    	$(this).slideUp(3000);
+	    });
+	    }else{
+	    	$('#successService').slideDown('slow', function(){
+	    	$(this).slideUp(3000);
+	    	});
+	    }
+	  },
+	  success: function(textStatus) {
+	    	console.log(textStatus);
+	  },
+	  error: function(xhr, textStatus, errorThrown) {
+	    //called when there is an error
+	  }
+	});
+	
+});

@@ -15,19 +15,19 @@ if (!empty($_SERVER['HTTP_X_REQUESTED_WITH'])&& strtolower($_SERVER['HTTP_X_REQU
 	}else{
 		$return = "<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content' id='service-content-1'>
 				<h4 class='text-center text-muted align-middle'>Contenido No disponible</h4>
-				<button class='btn btn-primary center-block' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
+				<button class='btn btn-primary center-block editServiceModal' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
 			</div>
 			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content' id='service-content-2'>
 				<h4 class='text-center text-muted align-middle'>Contenido No disponible</h4>
-				<button class='btn btn-primary center-block' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
+				<button class='btn btn-primary center-block editServiceModal' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
 			</div>
 			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content' id='service-content-3'>
 				<h4 class='text-center text-muted align-middle'>Contenido No disponible</h4>
-				<button class='btn btn-primary center-block' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
+				<button class='btn btn-primary center-block editServiceModal' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
 			</div>
 			<div class='col-lg-3 col-md-3 col-sm-6 col-xs-12 void-content' id='service-content-4'>
 				<h4 class='text-center text-muted align-middle'>Contenido No disponible</h4>
-				<button class='btn btn-primary center-block' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
+				<button class='btn btn-primary center-block editServiceModal' data-toggle='modal' data-target='#editServicesModal' value='void'>Editar</button>
 			</div>";
 	}
 

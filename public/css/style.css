@@ -78,3 +78,7 @@ footer{
 .align-middle{
 	margin-top: 45%; 
 }
+
+textarea{
+	resize: none !important;
+}
