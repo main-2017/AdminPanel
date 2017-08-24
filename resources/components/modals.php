@@ -133,7 +133,7 @@
         <form id="uploader-project" name="uploader-project" action="../../../app/controllers/uploader-project.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
           <div class="form-group">
             <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
-            <input type="file" name="uploadedfile" class="form-control">
+            <input type="file" name="uploadedfile2" class="form-control">
             <span class="help-block">Solo se permiten archivos en formato JPG o PNG, con un tamaño máximo de 2MB</span>
           </div>
           <div class="form-group">
@@ -155,15 +155,15 @@
           <div class="form-group">
             <label for="visible" class="control-label">Visible</label>
             <select name="visible" class="form-control">
-              <option value="Si">Si</option>
-              <option value="No">No</option>
+              <option value=1>Si</option>
+              <option value=0>No</option>
             </select>
           </div>
-      </div>
+      </form>
+       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
         <button type="submit" form="uploader-project" class="btn btn-success">Guardar</button>
-      </form>
       </div>
     </form>
   </div>
