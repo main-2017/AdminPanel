@@ -7,6 +7,7 @@
 	$descripcion = $mysqli->real_escape_string($_POST['descripcion']);
 	$estado = $mysqli->real_escape_string($_POST['estado']);
 	$visible = $mysqli->real_escape_string($_POST['visible']);
+	$visible = (int) $visible;
 	$uploadedfileload="true";
 	$uploadedfile_size=$_FILES['uploadedfile2']['size'];
 	echo $_FILES['uploadedfile2']['name'];
@@ -27,14 +28,13 @@
 	if($uploadedfileload == "true"){
 		if(move_uploaded_file ($_FILES['uploadedfile2']['tmp_name'], $add)){
 			echo "Ha sido subido satisfactoriamente";
-			$query = $mysqli->query("INSERT INTO proyectos(Imagen, Titulo, Descripcion, Estado, Visible) VALUES ('".$url.$_FILES['uploadedfile2']['name']."', '".$titulo."', '".$descripcion."', '".$estado."', '".$visible."'); ");
-		}else{
-			if($query)
-				header("Location: ../../resources/views/admin/index.php");
-			else
-				header("Location: ../../../../resources/views/admin/error.php");
-				echo "Error!!";
+			$query = $mysqli->query("INSERT INTO proyectos (Imagen, Titulo, Descripcion, Estado, Visible) VALUES ('../../../public/img/".$_FILES['uploadedfile2']['name']."', '".$titulo."', '".$descripcion."', '".$estado."', '".$visible."')");
 		}
+
+		if($query)
+			header("Location: ../../resources/views/admin/index.php");
+		else
+			header("Location: ../../resources/views/admin/error.php");
 
 	}else{
 		echo $msg;

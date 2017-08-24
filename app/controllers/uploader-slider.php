@@ -28,7 +28,7 @@
 			echo "Ha sido subido satisfactoriamente";
 			$query = $mysqli->query("INSERT INTO slider(Nombre, URL, Titulo, Descripcion, ALT) VALUES ('".$_FILES['uploadedfile']['name']."' , '../../../public/img/".$_FILES['uploadedfile']['name']."', '".$titulo."', '".$descripcion."', '".$alt."'); ");
 		}else{
-			header("Location: ../../../../resources/views/admin/error.php");
+			header("Location: ../../resources/views/admin/error.php");
 		}
 
 	}else{
