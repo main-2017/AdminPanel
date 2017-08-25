@@ -194,3 +194,29 @@
   </div>
 </div>
 </div>
+
+<!-- Modal de edición de proyectos -->
+
+<div id="editProjectModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header blue-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Editar proyectos</h4>
+      </div>
+      <div id="successProject" class="alert alert-success text-center" style="display: none;">Datos actualizados correctamente.</div>
+      <div id="errorProject" class="alert alert-danger text-center" style="display: none;">Ocurrió un error durante la operación. Vuelva a intentarlo</div>
+      <div class="modal-body">
+        <form method="POST" name="formEditProject" id="formEditProject" accept-charset="utf-8">
+        <input type="hidden" name="id-project" id="id-project" value>
+          <!-- Contenido generado dinamicamente -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        <button type="submit" form="formEditProject" class="btn btn-success">Guardar</button>
+      </div>
+  </div>
+</div>
+</div>

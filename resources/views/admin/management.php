@@ -1,20 +1,22 @@
 <?php 
-//session_start();
+session_start();
 
-//if (isset($_SESSION['user'])) {
-//	if ($_SESSION['user']['Rol'] == 'Editor') {
-//		header('Location: ../../../editor/');
-//	}
-//}else{
-//		header('Location: index.php');
+if (isset($_SESSION['user'])) {
+	if ($_SESSION['user']['Rol'] == 'Editor') {
+		header('Location: ../../../editor/');
+	}
+}else{
+		header('Location: index.php');
 
-//}
+}
 ?>
 <!DOCTYPE html>
 <html>
 	<?php require('../../../public/style_includes/head.php') ?>
 <body>
 	<?php include('../../components/navbar.php') ?>
+	<h3 class="text-center text-muted">Agregar Nuevos Usuarios</h3>
+	<br>
 	<div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 col-lg-offset-2 col-md-offset-2 col-sm-offset-3 col-xs-offset-3">
 		<form role="form" id="addUser">
 			<div class="form-group">

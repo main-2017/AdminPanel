@@ -4,6 +4,11 @@ label.form-label{
 	text-align: center;
 }
 
+#wrap{
+	margin-bottom: -35px;
+	min-height: 100%;
+}
+
 #login{
 	margin-top: 10%;
 	padding: 20px;
@@ -31,8 +36,7 @@ label.form-label{
 }
 
 footer{
-	position: absolute;
-	bottom: 0;
+	margin-top: 80px;
 	width: 100%;
 	clear: both;
 }
@@ -82,3 +86,4 @@ footer{
 textarea{
 	resize: none !important;
 }
+

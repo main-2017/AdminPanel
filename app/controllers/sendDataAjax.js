@@ -166,7 +166,8 @@ $(document).on('submit', '#deleteProject', function(event){
 //Pasaje de datos a ventana modal
 $(document).on('click', '.editProjectModal', function(){
 	var epID = $(this).val();
-	$(".modal-body #id-slider").val(epID);
+	$(".modal-body #id-project").val(epID);
+	console.log(epID);
 	loadEditProjectModal(epID);
 });
 
@@ -186,7 +187,7 @@ function loadEditProjectModal(input){
 	})
 };
 
-//Guardado de cambios en edición de Slider
+//Guardado de cambios en edición de Proyectos
 
 $(document).on('submit', '#formEditProject', function(event){
 	event.preventDefault();
