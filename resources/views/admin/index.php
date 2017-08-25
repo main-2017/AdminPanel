@@ -43,8 +43,8 @@
 			<div class="container-fluid">
 				<div id="project-edit-content">
 				</div>
-					<button class='btn btn-primary btn-md center-block' type='button' name='addProject' data-toggle='modal' data-target='#uploaderProjectModal'>Agregar +</button>
 			</div>
+			<button class='btn btn-primary btn-md center-block' type='button' name='addProject' data-toggle='modal' data-target='#uploaderProjectModal'>Agregar +</button>
 		</section>
 	</div>
 	<?php include('../../components/modals.php') ?>

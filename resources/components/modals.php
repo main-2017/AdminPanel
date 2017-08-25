@@ -169,3 +169,28 @@
   </div>
 </div>
 </div>
+
+<!-- Modal de eliminación de Proyectos -->
+
+<div id="deleteProjectModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header red-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Eliminar proyectos</h4>
+      </div>
+      <div class="modal-body">
+        <h4>¿Realmente desea eliminar este contenido? Esta acción es irreversible</h4>
+      </div>
+      <div class="modal-footer">
+      <form method="POST" id="deleteProject">
+        <input type="number" name="idProjectDelete" id="idProjectDelete" value hidden>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn btn-danger">Eliminar</button>
+      </form>
+      </div>
+  </div>
+</div>
+</div>

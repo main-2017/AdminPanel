@@ -131,3 +131,87 @@ $(document).on('submit', '#formEditSlider', function(event){
 	});
 	
 });
+
+// Eliminacion de proyectos
+$(document).on('click', '.deleteProjectModal', function(){
+	var pID = $(this).val();
+	$('#idProjectDelete').val(pID);
+	console.log(pID);
+});
+
+$(document).on('submit', '#deleteProject', function(event){
+	event.preventDefault();
+	jQuery.ajax({
+	  url: '../../../app/controllers/deleteProject.php',
+	  type: 'POST',
+	  dataType: 'json',
+	  data: $(this).serialize(),
+	  complete: function(serverAnswer) {
+	    if (!serverAnswer.error) {
+	    	self.parent.location.reload();
+	    }
+	  },
+	  success: function(data, textStatus, xhr) {
+	    //called when successful
+	  },
+	  error: function(xhr, textStatus, errorThrown) {
+	    //called when there is an error
+	  }
+	});
+	
+});
+
+// Edicion de proyectos
+
+//Pasaje de datos a ventana modal
+$(document).on('click', '.editProjectModal', function(){
+	var epID = $(this).val();
+	$(".modal-body #id-slider").val(epID);
+	loadEditProjectModal(epID);
+});
+
+// Carga de datos en Formulario Modal
+function loadEditProjectModal(input){
+	jQuery.ajax({
+		url: '../../../app/controllers/editProject.php',
+		type: 'POST',
+		dataType: 'html',
+		data: {input: input},
+	})
+	.done(function(serverAnswer) {
+		$("#formEditProject").html(serverAnswer);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+};
+
+//Guardado de cambios en edición de Slider
+
+$(document).on('submit', '#formEditProject', function(event){
+	event.preventDefault();
+	jQuery.ajax({
+	  url: '../../../app/controllers/updateEditProject.php',
+	  type: 'POST',
+	  dataType: 'json',
+	  data: $(this).serialize(),
+	  complete: function(serverRespond) {
+	    if (serverRespond.error) {
+	    	$('#errorProject').slideDown('slow', function(){
+	    	$(this).slideUp(3000);
+	    });
+	    }else{
+	    	$('#successProject').slideDown('slow', function(){
+	    	$(this).slideUp(3000);
+	    	});
+	    }
+	  },
+	  success: function(textStatus) {
+	    	console.log(textStatus);
+	  },
+	  error: function(xhr, textStatus, errorThrown) {
+	    //called when there is an error
+	  }
+	});
+	
+});
