@@ -1,3 +1,10 @@
+<?php 
+session_start();
+
+if (!(isset($_SESSION['user']))) {
+	header('Location: ../../../');
+}
+?>
 <!DOCTYPE html>
 <html>
 <?php require('../../../public/style_includes/head.php') ?>

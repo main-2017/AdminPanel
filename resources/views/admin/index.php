@@ -1,14 +1,10 @@
-<!-- <?php 
-// session_start();
+<?php 
+session_start();
 
-// if (isset($_SESSION['user'])) {
-// 	if ($_SESSION['user']['Rol'] == 'Editor') {
-// 		header('Location: ../editor/');
-// 	}elseif ($_SESSION['user']['Rol'] == 'Administrador') {
-// 		header('Location: ../admin/');
-// 	}
-// }
-?> -->
+if (!(isset($_SESSION['user']))) {
+	header('Location: ../../../');
+}
+?>
 
 <!DOCTYPE html>
 <html>

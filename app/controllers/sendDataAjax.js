@@ -1,3 +1,4 @@
+// Eliminacion de imágenes de Slider
 $(document).on('click', '.deleteModal', function(){
 	var ID = $(this).val();
 	$('#idSliderDelete').val(ID);
