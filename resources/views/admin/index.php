@@ -1,14 +1,14 @@
-<?php 
-session_start();
+<!-- <?php 
+// session_start();
 
-if (isset($_SESSION['user'])) {
-	if ($_SESSION['user']['Rol'] == 'Editor') {
-		header('Location: ../editor/');
-	}elseif ($_SESSION['user']['Rol'] == 'Administrador') {
-		header('Location: ../admin/');
-	}
-}
-?>
+// if (isset($_SESSION['user'])) {
+// 	if ($_SESSION['user']['Rol'] == 'Editor') {
+// 		header('Location: ../editor/');
+// 	}elseif ($_SESSION['user']['Rol'] == 'Administrador') {
+// 		header('Location: ../admin/');
+// 	}
+// }
+?> -->
 
 <!DOCTYPE html>
 <html>
@@ -45,6 +45,8 @@ if (isset($_SESSION['user'])) {
 					<div id="project-edit-content">
 					</div>
 				</div>
+				<br>
+				<br>
 				<button class='btn btn-primary btn-md center-block' type='button' name='addProject' data-toggle='modal' data-target='#uploaderProjectModal'>Agregar +</button>
 			</section>
 		</div>
